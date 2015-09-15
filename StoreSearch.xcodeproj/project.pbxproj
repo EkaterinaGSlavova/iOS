@@ -14,6 +14,7 @@
 		C41D00EB1BA832A300D9F6A9 /* StoreSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C41D00EA1BA832A300D9F6A9 /* StoreSearchTests.m */; };
 		C41D00F71BA8357700D9F6A9 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C41D00F51BA8357700D9F6A9 /* SearchViewController.m */; };
 		C41D00F81BA8357700D9F6A9 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41D00F61BA8357700D9F6A9 /* SearchViewController.xib */; };
+		C41D00FB1BA84DF300D9F6A9 /* SearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = C41D00FA1BA84DF300D9F6A9 /* SearchResult.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		C41D00F41BA8357700D9F6A9 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		C41D00F51BA8357700D9F6A9 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		C41D00F61BA8357700D9F6A9 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		C41D00F91BA84DF300D9F6A9 /* SearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResult.h; sourceTree = "<group>"; };
+		C41D00FA1BA84DF300D9F6A9 /* SearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResult.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				C41D00F41BA8357700D9F6A9 /* SearchViewController.h */,
 				C41D00F51BA8357700D9F6A9 /* SearchViewController.m */,
 				C41D00F61BA8357700D9F6A9 /* SearchViewController.xib */,
+				C41D00F91BA84DF300D9F6A9 /* SearchResult.h */,
+				C41D00FA1BA84DF300D9F6A9 /* SearchResult.m */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 			files = (
 				C41D00D41BA832A300D9F6A9 /* AppDelegate.m in Sources */,
 				C41D00F71BA8357700D9F6A9 /* SearchViewController.m in Sources */,
+				C41D00FB1BA84DF300D9F6A9 /* SearchResult.m in Sources */,
 				C41D00D11BA832A300D9F6A9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
