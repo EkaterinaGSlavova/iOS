@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		C41D00D11BA832A300D9F6A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C41D00D01BA832A300D9F6A9 /* main.m */; };
 		C41D00D41BA832A300D9F6A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C41D00D31BA832A300D9F6A9 /* AppDelegate.m */; };
-		C41D00D71BA832A300D9F6A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C41D00D61BA832A300D9F6A9 /* ViewController.m */; };
-		C41D00DA1BA832A300D9F6A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C41D00D81BA832A300D9F6A9 /* Main.storyboard */; };
 		C41D00DC1BA832A300D9F6A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C41D00DB1BA832A300D9F6A9 /* Images.xcassets */; };
 		C41D00DF1BA832A300D9F6A9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41D00DD1BA832A300D9F6A9 /* LaunchScreen.xib */; };
 		C41D00EB1BA832A300D9F6A9 /* StoreSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C41D00EA1BA832A300D9F6A9 /* StoreSearchTests.m */; };
+		C41D00F71BA8357700D9F6A9 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C41D00F51BA8357700D9F6A9 /* SearchViewController.m */; };
+		C41D00F81BA8357700D9F6A9 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41D00F61BA8357700D9F6A9 /* SearchViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +32,14 @@
 		C41D00D01BA832A300D9F6A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C41D00D21BA832A300D9F6A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C41D00D31BA832A300D9F6A9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C41D00D51BA832A300D9F6A9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C41D00D61BA832A300D9F6A9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		C41D00D91BA832A300D9F6A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C41D00DB1BA832A300D9F6A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C41D00DE1BA832A300D9F6A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C41D00E41BA832A300D9F6A9 /* StoreSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoreSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C41D00E91BA832A300D9F6A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C41D00EA1BA832A300D9F6A9 /* StoreSearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoreSearchTests.m; sourceTree = "<group>"; };
+		C41D00F41BA8357700D9F6A9 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		C41D00F51BA8357700D9F6A9 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		C41D00F61BA8357700D9F6A9 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +83,12 @@
 			children = (
 				C41D00D21BA832A300D9F6A9 /* AppDelegate.h */,
 				C41D00D31BA832A300D9F6A9 /* AppDelegate.m */,
-				C41D00D51BA832A300D9F6A9 /* ViewController.h */,
-				C41D00D61BA832A300D9F6A9 /* ViewController.m */,
-				C41D00D81BA832A300D9F6A9 /* Main.storyboard */,
 				C41D00DB1BA832A300D9F6A9 /* Images.xcassets */,
 				C41D00DD1BA832A300D9F6A9 /* LaunchScreen.xib */,
 				C41D00CE1BA832A300D9F6A9 /* Supporting Files */,
+				C41D00F41BA8357700D9F6A9 /* SearchViewController.h */,
+				C41D00F51BA8357700D9F6A9 /* SearchViewController.m */,
+				C41D00F61BA8357700D9F6A9 /* SearchViewController.xib */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -199,9 +199,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C41D00DA1BA832A300D9F6A9 /* Main.storyboard in Resources */,
 				C41D00DF1BA832A300D9F6A9 /* LaunchScreen.xib in Resources */,
 				C41D00DC1BA832A300D9F6A9 /* Images.xcassets in Resources */,
+				C41D00F81BA8357700D9F6A9 /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,8 +219,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C41D00D71BA832A300D9F6A9 /* ViewController.m in Sources */,
 				C41D00D41BA832A300D9F6A9 /* AppDelegate.m in Sources */,
+				C41D00F71BA8357700D9F6A9 /* SearchViewController.m in Sources */,
 				C41D00D11BA832A300D9F6A9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,14 +244,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C41D00D81BA832A300D9F6A9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C41D00D91BA832A300D9F6A9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C41D00DD1BA832A300D9F6A9 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
