@@ -39,6 +39,8 @@ static NSString *const NothingFoundCellIdentifier = @"NothingFoundCell";
     
     [self.tableView registerNib:cellNib forCellReuseIdentifier:NothingFoundCellIdentifier];
     
+    [self.searchBar becomeFirstResponder];
+    
 }
 
 - (void)didReceiveMemoryWarning {
