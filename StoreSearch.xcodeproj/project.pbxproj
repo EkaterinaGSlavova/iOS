@@ -15,6 +15,9 @@
 		C41D00F71BA8357700D9F6A9 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C41D00F51BA8357700D9F6A9 /* SearchViewController.m */; };
 		C41D00F81BA8357700D9F6A9 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41D00F61BA8357700D9F6A9 /* SearchViewController.xib */; };
 		C41D00FB1BA84DF300D9F6A9 /* SearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = C41D00FA1BA84DF300D9F6A9 /* SearchResult.m */; };
+		C41D00FF1BA85CAE00D9F6A9 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41D00FE1BA85CAE00D9F6A9 /* SearchResultCell.xib */; };
+		C41D01021BA8661300D9F6A9 /* SearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C41D01011BA8661300D9F6A9 /* SearchResultCell.m */; };
+		C49EED9E1BA95DF30027CFF1 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C49EED9D1BA95DF30027CFF1 /* NothingFoundCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,10 @@
 		C41D00F61BA8357700D9F6A9 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		C41D00F91BA84DF300D9F6A9 /* SearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResult.h; sourceTree = "<group>"; };
 		C41D00FA1BA84DF300D9F6A9 /* SearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResult.m; sourceTree = "<group>"; };
+		C41D00FE1BA85CAE00D9F6A9 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		C41D01001BA8661300D9F6A9 /* SearchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultCell.h; sourceTree = "<group>"; };
+		C41D01011BA8661300D9F6A9 /* SearchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultCell.m; sourceTree = "<group>"; };
+		C49EED9D1BA95DF30027CFF1 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +101,10 @@
 				C41D00F61BA8357700D9F6A9 /* SearchViewController.xib */,
 				C41D00F91BA84DF300D9F6A9 /* SearchResult.h */,
 				C41D00FA1BA84DF300D9F6A9 /* SearchResult.m */,
+				C41D00FE1BA85CAE00D9F6A9 /* SearchResultCell.xib */,
+				C41D01001BA8661300D9F6A9 /* SearchResultCell.h */,
+				C41D01011BA8661300D9F6A9 /* SearchResultCell.m */,
+				C49EED9D1BA95DF30027CFF1 /* NothingFoundCell.xib */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -206,6 +217,8 @@
 			files = (
 				C41D00DF1BA832A300D9F6A9 /* LaunchScreen.xib in Resources */,
 				C41D00DC1BA832A300D9F6A9 /* Images.xcassets in Resources */,
+				C41D00FF1BA85CAE00D9F6A9 /* SearchResultCell.xib in Resources */,
+				C49EED9E1BA95DF30027CFF1 /* NothingFoundCell.xib in Resources */,
 				C41D00F81BA8357700D9F6A9 /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +240,7 @@
 				C41D00D41BA832A300D9F6A9 /* AppDelegate.m in Sources */,
 				C41D00F71BA8357700D9F6A9 /* SearchViewController.m in Sources */,
 				C41D00FB1BA84DF300D9F6A9 /* SearchResult.m in Sources */,
+				C41D01021BA8661300D9F6A9 /* SearchResultCell.m in Sources */,
 				C41D00D11BA832A300D9F6A9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +428,7 @@
 				C41D00F01BA832A300D9F6A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C41D00F11BA832A300D9F6A9 /* Build configuration list for PBXNativeTarget "StoreSearchTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +437,7 @@
 				C41D00F31BA832A300D9F6A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
