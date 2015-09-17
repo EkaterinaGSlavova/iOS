@@ -27,6 +27,27 @@
                         <outlet property="delegate" destination="-1" id="9e7-Gb-iGy"/>
                     </connections>
                 </tableView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zeB-Jk-Ox9">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <items>
+                        <navigationItem id="reu-OC-RF0">
+                            <nil key="title"/>
+                            <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="ZwE-aW-iVy">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="All"/>
+                                    <segment title="Music"/>
+                                    <segment title="Software"/>
+                                    <segment title="E-Books"/>
+                                </segments>
+                            </segmentedControl>
+                        </navigationItem>
+                    </items>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="0.0" y="66" width="400" height="44"/>
+                    </variation>
+                </navigationBar>
                 <searchBar contentMode="redraw" placeholder="App name, artist, song, album, ebook." translatesAutoresizingMaskIntoConstraints="NO" id="gah-ao-YoX">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <textInputTraits key="textInputTraits"/>
@@ -48,6 +69,7 @@
             </constraints>
             <variation key="default">
                 <mask key="subviews">
+                    <exclude reference="zeB-Jk-Ox9"/>
                     <exclude reference="gah-ao-YoX"/>
                 </mask>
                 <mask key="constraints">
@@ -60,6 +82,7 @@
             </variation>
             <variation key="widthClass=compact">
                 <mask key="subviews">
+                    <include reference="zeB-Jk-Ox9"/>
                     <include reference="gah-ao-YoX"/>
                 </mask>
                 <mask key="constraints">
@@ -70,7 +93,7 @@
                     <include reference="pdU-pD-Nzr"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="598" y="495"/>
+            <point key="canvasLocation" x="549" y="495"/>
         </view>
     </objects>
 </document>
