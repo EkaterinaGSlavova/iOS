@@ -17,6 +17,7 @@
 		C41D00FB1BA84DF300D9F6A9 /* SearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = C41D00FA1BA84DF300D9F6A9 /* SearchResult.m */; };
 		C41D00FF1BA85CAE00D9F6A9 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41D00FE1BA85CAE00D9F6A9 /* SearchResultCell.xib */; };
 		C41D01021BA8661300D9F6A9 /* SearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C41D01011BA8661300D9F6A9 /* SearchResultCell.m */; };
+		C499369E1BAAAC000008BC50 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C499369D1BAAAC000008BC50 /* LoadingCell.xib */; };
 		C49EED9E1BA95DF30027CFF1 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C49EED9D1BA95DF30027CFF1 /* NothingFoundCell.xib */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		C41D00FE1BA85CAE00D9F6A9 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		C41D01001BA8661300D9F6A9 /* SearchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultCell.h; sourceTree = "<group>"; };
 		C41D01011BA8661300D9F6A9 /* SearchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultCell.m; sourceTree = "<group>"; };
+		C499369D1BAAAC000008BC50 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		C49EED9D1BA95DF30027CFF1 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 				C41D01001BA8661300D9F6A9 /* SearchResultCell.h */,
 				C41D01011BA8661300D9F6A9 /* SearchResultCell.m */,
 				C49EED9D1BA95DF30027CFF1 /* NothingFoundCell.xib */,
+				C499369D1BAAAC000008BC50 /* LoadingCell.xib */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			files = (
 				C41D00DF1BA832A300D9F6A9 /* LaunchScreen.xib in Resources */,
 				C41D00DC1BA832A300D9F6A9 /* Images.xcassets in Resources */,
+				C499369E1BAAAC000008BC50 /* LoadingCell.xib in Resources */,
 				C41D00FF1BA85CAE00D9F6A9 /* SearchResultCell.xib in Resources */,
 				C49EED9E1BA95DF30027CFF1 /* NothingFoundCell.xib in Resources */,
 				C41D00F81BA8357700D9F6A9 /* SearchViewController.xib in Resources */,
