@@ -23,4 +23,6 @@
 
 - (NSComparisonResult)compareName:(SearchResult *)other;
 
+- (NSString *)kindForDisplay;
+
 @end
