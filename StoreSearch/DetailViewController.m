@@ -37,6 +37,8 @@
     self.view.tintColor = [UIColor colorWithRed:20/255.0f green:160/255.0f blue:160/255.0f alpha:1.0f];
     self.popUpView.layer.cornerRadius = 10.0f;
     
+    self.view.backgroundColor = [UIColor clearColor];
+    
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(close:)];
     
     gestureRecognizer.cancelsTouchesInView = NO;
@@ -85,11 +87,22 @@
 }
 
 - (IBAction)close:(id)sender {
+    [self dismissFromParentViewController];
+}
+
+- (void)dismissFromParentViewController {
     
     [self willMoveToParentViewController:nil];
     [self.view removeFromSuperview];
     [self removeFromParentViewController];
-    
+}
+
+- (void)presentInParentViewController:(UIViewController *)parentViewController {
+
+    self.view.frame = parentViewController.view.bounds;
+    [parentViewController.view addSubview:self.view];
+    [parentViewController addChildViewController:self];
+    [self didMoveToParentViewController:parentViewController];
 }
 - (void)dealloc {
     
