@@ -43,4 +43,8 @@
     CGGradientRelease(gradient);
     
 }
+
+- (void)dealloc {
+    NSLog(@"dealloc %@", self);
+}
 @end
