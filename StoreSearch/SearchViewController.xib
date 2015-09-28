@@ -44,14 +44,14 @@
                             </segmentedControl>
                         </navigationItem>
                     </items>
-                    <variation key="widthClass=compact" fixedFrame="YES">
+                    <variation key="widthClass=compact" misplaced="YES">
                         <rect key="frame" x="0.0" y="66" width="400" height="44"/>
                     </variation>
                 </navigationBar>
                 <searchBar contentMode="redraw" placeholder="App name, artist, song, album, ebook." translatesAutoresizingMaskIntoConstraints="NO" id="gah-ao-YoX">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <textInputTraits key="textInputTraits"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
+                    <variation key="widthClass=compact" misplaced="YES">
                         <rect key="frame" x="0.0" y="22" width="375" height="44"/>
                     </variation>
                     <connections>
@@ -61,7 +61,13 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="gah-ao-YoX" secondAttribute="trailing" id="Dyu-WC-fsc"/>
+                <constraint firstItem="zeB-Jk-Ox9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UFX-qa-39X"/>
+                <constraint firstItem="gah-ao-YoX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Uk2-53-pAR"/>
+                <constraint firstItem="gah-ao-YoX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Uoa-0v-mhT"/>
+                <constraint firstAttribute="trailing" secondItem="zeB-Jk-Ox9" secondAttribute="trailing" id="XGD-aS-68Q"/>
                 <constraint firstAttribute="trailing" secondItem="BwX-mp-zkw" secondAttribute="trailing" id="adR-PC-11F"/>
+                <constraint firstItem="zeB-Jk-Ox9" firstAttribute="top" secondItem="gah-ao-YoX" secondAttribute="bottom" id="bHr-sL-r8z"/>
                 <constraint firstAttribute="trailing" secondItem="BwX-mp-zkw" secondAttribute="trailing" id="fOZ-Qh-u1O"/>
                 <constraint firstAttribute="bottom" secondItem="BwX-mp-zkw" secondAttribute="bottom" id="hG8-Th-eS8"/>
                 <constraint firstItem="BwX-mp-zkw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hg5-Ar-qbX"/>
@@ -78,6 +84,12 @@
                     <exclude reference="hG8-Th-eS8"/>
                     <exclude reference="hg5-Ar-qbX"/>
                     <exclude reference="pdU-pD-Nzr"/>
+                    <exclude reference="Dyu-WC-fsc"/>
+                    <exclude reference="Uk2-53-pAR"/>
+                    <exclude reference="Uoa-0v-mhT"/>
+                    <exclude reference="UFX-qa-39X"/>
+                    <exclude reference="XGD-aS-68Q"/>
+                    <exclude reference="bHr-sL-r8z"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -91,6 +103,12 @@
                     <include reference="hG8-Th-eS8"/>
                     <include reference="hg5-Ar-qbX"/>
                     <include reference="pdU-pD-Nzr"/>
+                    <include reference="Dyu-WC-fsc"/>
+                    <include reference="Uk2-53-pAR"/>
+                    <include reference="Uoa-0v-mhT"/>
+                    <include reference="UFX-qa-39X"/>
+                    <include reference="XGD-aS-68Q"/>
+                    <include reference="bHr-sL-r8z"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="549" y="495"/>

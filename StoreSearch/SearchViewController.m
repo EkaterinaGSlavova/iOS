@@ -11,6 +11,7 @@
 #import "SearchResultCell.h"
 #import <AFNetworking/AFNetworking.h>
 #import "DetailViewController.h"
+#import "LandscapeViewController.h"
 
 static NSString * const SearchResultCellIdentifier = @"SearchResultCell";
 static NSString *const NothingFoundCellIdentifier = @"NothingFoundCell";
@@ -30,6 +31,9 @@ static NSString *const LoadingCellIdentifier = @"LoadingCell";
     NSMutableArray *_searchResults;
     BOOL _isLoading;
     NSOperationQueue *_queue;
+    LandscapeViewController *_landscapeViewController;
+    UIStatusBarStyle _statusBarStyle;
+    __weak DetailViewController *_detailViewController;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -57,11 +61,17 @@ static NSString *const LoadingCellIdentifier = @"LoadingCell";
     
     cellNib = [UINib nibWithNibName:LoadingCellIdentifier bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:LoadingCellIdentifier];
+    
+    _statusBarStyle = UIStatusBarStyleDefault;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return _statusBarStyle;
 }
 
 #pragma mark - TableViewDataSource
@@ -288,6 +298,8 @@ static NSString *const LoadingCellIdentifier = @"LoadingCell";
     SearchResult *searchResult = _searchResults[indexPath.row];
     controller.searchResult = searchResult;
     
+    _detailViewController = controller; //puts the value from the local variable controller into the _detailViewController instance variable
+    
     [controller presentInParentViewController:self];
 }
 
@@ -303,6 +315,57 @@ static NSString *const LoadingCellIdentifier = @"LoadingCell";
 - (IBAction)segmentChanged:(UISegmentedControl *)sender {
     if (_searchResults != nil) {
         [self performSearch];
+    }
+}
+- (void)showLandscapeViewWithDuration:(NSTimeInterval)duration {
+   
+    if (_landscapeViewController == nil) {
+        _landscapeViewController = [[LandscapeViewController alloc] initWithNibName:@"LandscapeViewController" bundle:nil];
+        
+        _landscapeViewController.view.frame = self.view.bounds;
+        _landscapeViewController.view.alpha = 0.0f;
+        
+        [self.view addSubview:_landscapeViewController.view];
+        [self addChildViewController:_landscapeViewController];
+        
+        [UIView animateWithDuration:duration animations:^{
+            _landscapeViewController.view.alpha = 1.0f;
+            _statusBarStyle = UIStatusBarStyleLightContent;
+            [self setNeedsStatusBarAppearanceUpdate];
+        } completion:^(BOOL finished) {
+            [_landscapeViewController didMoveToParentViewController:self];
+        }];
+        [_landscapeViewController didMoveToParentViewController:self];
+        
+        [self.searchBar resignFirstResponder];
+        [_detailViewController dismissFromParentViewControllerWithAnimationType:DetailViewControllerAnimationTypeFade];
+    }
+}
+
+- (void)hideLandscapeViewWithDuration:(NSTimeInterval)duration {
+    
+    if (_landscapeViewController != nil) {
+        [_landscapeViewController willMoveToParentViewController:nil];
+        
+        [UIView animateWithDuration:duration animations:^{
+            _landscapeViewController.view.alpha = 0.0f;
+            _statusBarStyle = UIStatusBarStyleDefault;
+            [self setNeedsStatusBarAppearanceUpdate];
+        } completion:^(BOOL finished) {
+        [_landscapeViewController.view removeFromSuperview];
+        [_landscapeViewController removeFromParentViewController];
+        _landscapeViewController = nil;
+        }];
+    }
+}
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    
+    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    
+    if (UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) {
+        [self hideLandscapeViewWithDuration:duration];
+    } else {
+        [self showLandscapeViewWithDuration:duration];
     }
 }
 @end
