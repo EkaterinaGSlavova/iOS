@@ -108,7 +108,7 @@
         }
         _gradientView.alpha = 0.0f; //the gradient fades out
         
-    } completion:^(BOOL finish) {
+    } completion:^(BOOL finished) {
         [self.view removeFromSuperview];
         [self removeFromParentViewController];
         [_gradientView removeFromSuperview];
