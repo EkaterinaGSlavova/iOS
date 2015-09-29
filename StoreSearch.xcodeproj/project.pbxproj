@@ -22,6 +22,7 @@
 		C4A03F7F1BBABC660019C3EB /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4A03F811BBABC660019C3EB /* SearchViewController.xib */; };
 		C4A03F841BBABE490019C3EB /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4A03F861BBABE490019C3EB /* DetailViewController.xib */; };
 		C4A03F891BBAC0460019C3EB /* LandscapeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4A03F8B1BBAC0460019C3EB /* LandscapeViewController.xib */; };
+		C4A03F8E1BBAC84B0019C3EB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4A03F8C1BBAC84B0019C3EB /* Localizable.strings */; };
 		C4A3096A1BB9340B009A2C81 /* LandscapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A309681BB9340B009A2C81 /* LandscapeViewController.m */; };
 		C4E58BE71BABFE7A00971E13 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E58BE51BABFE7A00971E13 /* DetailViewController.m */; };
 		C4E58BEB1BAC526700971E13 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E58BEA1BAC526700971E13 /* GradientView.m */; };
@@ -70,6 +71,8 @@
 		C4A03F851BBABE490019C3EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DetailViewController.xib; sourceTree = "<group>"; };
 		C4A03F881BBABE520019C3EB /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/DetailViewController.strings; sourceTree = "<group>"; };
 		C4A03F8A1BBAC0460019C3EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LandscapeViewController.xib; sourceTree = "<group>"; };
+		C4A03F8D1BBAC84B0019C3EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C4A03F8F1BBAC8970019C3EB /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C4A309671BB9340B009A2C81 /* LandscapeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandscapeViewController.h; sourceTree = "<group>"; };
 		C4A309681BB9340B009A2C81 /* LandscapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandscapeViewController.m; sourceTree = "<group>"; };
 		C4E58BE41BABFE7A00971E13 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -169,6 +172,7 @@
 		C41D00CE1BA832A300D9F6A9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C4A03F8C1BBAC84B0019C3EB /* Localizable.strings */,
 				C41D00CF1BA832A300D9F6A9 /* Info.plist */,
 				C41D00D01BA832A300D9F6A9 /* main.m */,
 			);
@@ -279,6 +283,7 @@
 				C41D00DC1BA832A300D9F6A9 /* Images.xcassets in Resources */,
 				C4A03F841BBABE490019C3EB /* DetailViewController.xib in Resources */,
 				C4A03F7A1BBAB8610019C3EB /* LoadingCell.xib in Resources */,
+				C4A03F8E1BBAC84B0019C3EB /* Localizable.strings in Resources */,
 				C41D00FF1BA85CAE00D9F6A9 /* SearchResultCell.xib in Resources */,
 				C4A03F761BBAB3010019C3EB /* NothingFoundCell.xib in Resources */,
 				C4A03F891BBAC0460019C3EB /* LandscapeViewController.xib in Resources */,
@@ -414,6 +419,15 @@
 				C4A03F8A1BBAC0460019C3EB /* Base */,
 			);
 			name = LandscapeViewController.xib;
+			sourceTree = "<group>";
+		};
+		C4A03F8C1BBAC84B0019C3EB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4A03F8D1BBAC84B0019C3EB /* en */,
+				C4A03F8F1BBAC8970019C3EB /* nl */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

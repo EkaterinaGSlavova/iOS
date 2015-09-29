@@ -37,7 +37,7 @@
     }
     
     NSString *kind = [searchResult kindForDisplay];
-    self.artistNameLabel.text = [NSString stringWithFormat:@"%@ (%@)", artistName, kind];
+    self.artistNameLabel.text = [NSString stringWithFormat:NSLocalizedString(@"%@ (%@)", @"Format for artist name label"), artistName, kind];
     
     [self.artworkImageView setImageWithURL:[NSURL URLWithString:searchResult.artworkURL60] placeholderImage:[UIImage imageNamed:@"Placeholder"]];
 
