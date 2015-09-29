@@ -1,0 +1,15 @@
+
+/* Class = "UISegmentedControl"; ZwE-aW-iVy.segmentTitles[0] = "All"; ObjectID = "ZwE-aW-iVy"; */
+"ZwE-aW-iVy.segmentTitles[0]" = "Alles";
+
+/* Class = "UISegmentedControl"; ZwE-aW-iVy.segmentTitles[1] = "Music"; ObjectID = "ZwE-aW-iVy"; */
+"ZwE-aW-iVy.segmentTitles[1]" = "Muziek";
+
+/* Class = "UISegmentedControl"; ZwE-aW-iVy.segmentTitles[2] = "Software"; ObjectID = "ZwE-aW-iVy"; */
+"ZwE-aW-iVy.segmentTitles[2]" = "Software";
+
+/* Class = "UISegmentedControl"; ZwE-aW-iVy.segmentTitles[3] = "E-Books"; ObjectID = "ZwE-aW-iVy"; */
+"ZwE-aW-iVy.segmentTitles[3]" = "E-boeken";
+
+/* Class = "UISearchBar"; placeholder = "App name, artist, song, album, ebook."; ObjectID = "gah-ao-YoX"; */
+"gah-ao-YoX.placeholder" = "Naam van artiest, nummer, album";

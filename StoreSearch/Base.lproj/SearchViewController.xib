@@ -44,16 +44,10 @@
                             </segmentedControl>
                         </navigationItem>
                     </items>
-                    <variation key="widthClass=compact" misplaced="YES">
-                        <rect key="frame" x="0.0" y="66" width="400" height="44"/>
-                    </variation>
                 </navigationBar>
                 <searchBar contentMode="redraw" placeholder="App name, artist, song, album, ebook." translatesAutoresizingMaskIntoConstraints="NO" id="gah-ao-YoX">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <textInputTraits key="textInputTraits"/>
-                    <variation key="widthClass=compact" misplaced="YES">
-                        <rect key="frame" x="0.0" y="22" width="375" height="44"/>
-                    </variation>
                     <connections>
                         <outlet property="delegate" destination="-1" id="vkO-QR-rhu"/>
                     </connections>
@@ -79,17 +73,17 @@
                     <exclude reference="gah-ao-YoX"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="adR-PC-11F"/>
-                    <exclude reference="fOZ-Qh-u1O"/>
-                    <exclude reference="hG8-Th-eS8"/>
-                    <exclude reference="hg5-Ar-qbX"/>
-                    <exclude reference="pdU-pD-Nzr"/>
                     <exclude reference="Dyu-WC-fsc"/>
                     <exclude reference="Uk2-53-pAR"/>
                     <exclude reference="Uoa-0v-mhT"/>
                     <exclude reference="UFX-qa-39X"/>
                     <exclude reference="XGD-aS-68Q"/>
                     <exclude reference="bHr-sL-r8z"/>
+                    <exclude reference="adR-PC-11F"/>
+                    <exclude reference="fOZ-Qh-u1O"/>
+                    <exclude reference="hG8-Th-eS8"/>
+                    <exclude reference="hg5-Ar-qbX"/>
+                    <exclude reference="pdU-pD-Nzr"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -98,17 +92,17 @@
                     <include reference="gah-ao-YoX"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="adR-PC-11F"/>
-                    <include reference="fOZ-Qh-u1O"/>
-                    <include reference="hG8-Th-eS8"/>
-                    <include reference="hg5-Ar-qbX"/>
-                    <include reference="pdU-pD-Nzr"/>
                     <include reference="Dyu-WC-fsc"/>
                     <include reference="Uk2-53-pAR"/>
                     <include reference="Uoa-0v-mhT"/>
                     <include reference="UFX-qa-39X"/>
                     <include reference="XGD-aS-68Q"/>
                     <include reference="bHr-sL-r8z"/>
+                    <include reference="adR-PC-11F"/>
+                    <include reference="fOZ-Qh-u1O"/>
+                    <include reference="hG8-Th-eS8"/>
+                    <include reference="hg5-Ar-qbX"/>
+                    <include reference="pdU-pD-Nzr"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="549" y="495"/>
