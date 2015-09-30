@@ -32,12 +32,15 @@ static NSString *const LoadingCellIdentifier = @"LoadingCell";
     Search *_search;
     LandscapeViewController *_landscapeViewController;
     UIStatusBarStyle _statusBarStyle;
-    __weak DetailViewController *_detailViewController;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
+        [self.searchBar becomeFirstResponder];
+    }
     self.tableView.contentInset = UIEdgeInsetsMake(108, 0, 0, 0);
     self.tableView.rowHeight = 80;
     
@@ -139,17 +142,18 @@ static NSString *const LoadingCellIdentifier = @"LoadingCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [self.searchBar resignFirstResponder];
-    
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    DetailViewController *controller = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
-    
     SearchResult *searchResult = _search.searchResults[indexPath.row];
-    controller.searchResult = searchResult;
     
-    _detailViewController = controller; //puts the value from the local variable controller into the _detailViewController instance variable
-    
-    [controller presentInParentViewController:self];
+    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
+        
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        DetailViewController *controller = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+        controller.searchResult = searchResult;
+        [controller presentInParentViewController:self];
+        self.detailViewController = controller; //puts the value from the local variable controller into the _detailViewController instance variable
+    } else {
+        self.detailViewController.searchResult = searchResult;
+    }
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -188,7 +192,7 @@ static NSString *const LoadingCellIdentifier = @"LoadingCell";
         [_landscapeViewController didMoveToParentViewController:self];
         
         [self.searchBar resignFirstResponder];
-        [_detailViewController dismissFromParentViewControllerWithAnimationType:DetailViewControllerAnimationTypeFade];
+        [self.detailViewController dismissFromParentViewControllerWithAnimationType:DetailViewControllerAnimationTypeFade];
     }
 }
 
@@ -212,10 +216,12 @@ static NSString *const LoadingCellIdentifier = @"LoadingCell";
     
     [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
     
-    if (UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) {
+    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
+        if (UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) {
         [self hideLandscapeViewWithDuration:duration];
     } else {
         [self showLandscapeViewWithDuration:duration];
+        }
     }
 }
 @end

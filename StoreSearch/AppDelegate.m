@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SearchViewController.h"
+#import "DetailViewController.h"
 
 @interface AppDelegate ()
 
@@ -27,8 +28,19 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self customizeAppearance];
     self.searchViewController = [[SearchViewController alloc] initWithNibName:@"SearchViewController" bundle:nil];
-    self.window.rootViewController = self.searchViewController;
     
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        self.splitViewController = [[UISplitViewController alloc] init];
+        DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+        UINavigationController *detailNavigationController = [[UINavigationController alloc] initWithRootViewController:detailViewController];
+        self.splitViewController.delegate = detailViewController;
+        
+        self.splitViewController.viewControllers = @[self.searchViewController, detailNavigationController];
+        self.searchViewController.detailViewController = detailViewController;
+        self.window.rootViewController = self.splitViewController;
+    } else {
+        self.window.rootViewController = self.searchViewController;
+    }
     [self.window makeKeyAndVisible];
     
     return YES;

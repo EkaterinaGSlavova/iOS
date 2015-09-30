@@ -21,6 +21,8 @@
 @property (nonatomic, weak) IBOutlet UILabel *kindLabel;
 @property (nonatomic, weak) IBOutlet UILabel *genreLabel;
 @property (nonatomic, weak) IBOutlet UIButton *priceButton;
+@property (nonatomic, strong) UIPopoverController *masterPopoverController;
+@property (nonatomic, weak) IBOutlet UIButton *closeButton;
 
 @end
 
@@ -43,11 +45,19 @@
     
     self.view.backgroundColor = [UIColor clearColor];
     
-    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(close:)];
-    
-    gestureRecognizer.cancelsTouchesInView = NO;
-    gestureRecognizer.delegate = self;
-    [self.view addGestureRecognizer:gestureRecognizer];
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"LandscapeBackground"]];
+        self.closeButton.hidden = YES;
+        self.popUpView.hidden = (self.searchResult == nil);
+        self.title = [[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleDisplayName"];
+    } else {
+        UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(close:)];
+        
+        gestureRecognizer.cancelsTouchesInView = NO;
+        gestureRecognizer.delegate = self;
+        [self.view addGestureRecognizer:gestureRecognizer];
+        self.view.backgroundColor = [UIColor clearColor];
+    }
     
     if (self.searchResult != nil) {
         [self updateUI];
@@ -81,6 +91,11 @@
     }
     [self.priceButton setTitle:priceText forState:UIControlStateNormal];
     [self.artworkImageView setImageWithURL:[NSURL URLWithString:self.searchResult.artworkURL100]];
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        self.popUpView.hidden = NO;
+        [self.masterPopoverController dismissPopoverAnimated:YES];
+    }
 }
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
     return (touch.view == self.view);
@@ -115,6 +130,16 @@
     }];
 }
 
+- (void)setSearchResult:(SearchResult *)newSearchResult {
+    
+    if (_searchResult != newSearchResult) {
+        _searchResult = newSearchResult;
+        
+        if ([self isViewLoaded]) {
+            [self updateUI];
+        }
+    }
+}
 - (void)presentInParentViewController:(UIViewController *)parentViewController {
 
     _gradientView = [[GradientView alloc] initWithFrame:parentViewController.view.bounds];
@@ -152,5 +177,20 @@
 - (IBAction)openStore:(id)sender {
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.searchResult.storeURL]];
+}
+
+#pragma mark - UISplitViewControllerDelegate 
+
+- (void)splitViewController:(UISplitViewController *)splitViewController willHideViewController:(UIViewController *)viewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)popoverViewController {
+    
+    barButtonItem.title = NSLocalizedString(@"Search", @"Split-view master button");
+    [self.navigationItem setLeftBarButtonItem:barButtonItem animated:YES];
+    self.masterPopoverController = popoverViewController;
+}
+
+- (void)splitViewController:(UISplitViewController *)splitViewController willShowViewController:(UIViewController *)viewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem {
+    
+    [self.navigationItem setLeftBarButtonItem:nil animated:YES];
+    self.masterPopoverController = nil;
 }
 @end
