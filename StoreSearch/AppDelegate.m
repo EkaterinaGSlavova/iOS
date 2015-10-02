@@ -18,6 +18,7 @@
 
 - (void)customizeAppearance {
     
+    
     UIColor *barTintColor = [UIColor colorWithRed:20/255.0f green:160/255.0f blue:160/255.0f alpha:1.0f];
     [[UISearchBar appearance] setBarTintColor:barTintColor];
     
@@ -25,27 +26,34 @@
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    //UINavigationController *searchNavigationViewController = [[UINavigationController alloc] initWithRootViewController:self.searchViewController];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self customizeAppearance];
+    
     self.searchViewController = [[SearchViewController alloc] initWithNibName:@"SearchViewController" bundle:nil];
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         self.splitViewController = [[UISplitViewController alloc] init];
+        
         DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
         UINavigationController *detailNavigationController = [[UINavigationController alloc] initWithRootViewController:detailViewController];
-        self.splitViewController.delegate = detailViewController;
         
+        self.splitViewController.delegate = detailViewController;
         self.splitViewController.viewControllers = @[self.searchViewController, detailNavigationController];
+        
         self.searchViewController.detailViewController = detailViewController;
+    
         self.window.rootViewController = self.splitViewController;
     } else {
         self.window.rootViewController = self.searchViewController;
     }
-    [self.window makeKeyAndVisible];
     
+    [self.window makeKeyAndVisible];
     return YES;
 }
+- (void)splitViewController:(UISplitViewController *)splitViewController willChangeToDisplayMode:(UISplitViewControllerDisplayMode)displayMode {
 
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

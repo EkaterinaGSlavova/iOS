@@ -5,10 +5,9 @@
 //  Created by Ekaterina on 9/28/15.
 //  Copyright (c) 2015 Ekaterina. All rights reserved.
 //
-
+#import <AFNetworking/UIButton+AFNetworking.h>
 #import "LandscapeViewController.h"
 #import "SearchResult.h"
-#import <AFNetworking/UIButton+AFNetworking.h>
 #import "Search.h"
 #import "DetailViewController.h"
 
@@ -45,11 +44,6 @@
     }
     
 }
-
-- (void)hideSpinner {
-    
-    [[self.view viewWithTag:1000] removeFromSuperview];
-}
 - (void)dealloc {
     
     NSLog(@"dealloc %@", self);
@@ -58,7 +52,6 @@
         [button cancelImageRequestOperationForState:UIControlStateNormal];
     }
 }
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -72,8 +65,6 @@
     
     if (_firstTime) {
         _firstTime = NO;
-        
-        [self tileButtons];
         
         if (self.search != nil) {
             if (self.search.isLoading) {
@@ -112,6 +103,12 @@
     [self.view addSubview:spinner];
     [spinner startAnimating];
 }
+
+- (void)hideSpinner {
+    
+    [[self.view viewWithTag:1000] removeFromSuperview];
+}
+
 - (void)tileButtons {
     
     int columnPerPage = 5;
@@ -138,14 +135,13 @@
     
     for (SearchResult *searchResult in self.search.searchResults) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [self downloadImageForSearchResult:searchResult andPlaceOnButton:button];
         [button setBackgroundImage:[UIImage imageNamed:@"LandscapeButton"]forState:UIControlStateNormal];
-        //[button setTitle:[NSString stringWithFormat:@"%d", index] forState:UIControlStateNormal];
-        button.frame = CGRectMake(x + marginHorz, 20.0f + row*itemHeight + marginVert, buttonWidth, buttonHeight);
         button.tag = 2000 + index;
         [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
-        
-        
+        //[button setTitle:[NSString stringWithFormat:@"%d", index] forState:UIControlStateNormal];
+        button.frame = CGRectMake(x + marginHorz, 20.0f + row*itemHeight + marginVert, buttonWidth, buttonHeight);
+       
+        [self downloadImageForSearchResult:searchResult andPlaceOnButton:button];
         [self.scrollView addSubview:button];
         
         index++;
@@ -170,16 +166,6 @@
     self.pageControl.numberOfPages = numPages;
     self.pageControl.currentPage = 0;
 }
-
-- (void)buttonPressed:(UIButton *)sender {
-    
-    DetailViewController *controller = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
-    
-    SearchResult *searchResult = self.search.searchResults[sender.tag - 2000];
-    controller.searchResult = searchResult;
-    
-    [controller presentInParentViewController:self];
-}
 - (void)downloadImageForSearchResult:(SearchResult *)searchResult andPlaceOnButton:(UIButton *)button {
     
     NSURL *url = [NSURL URLWithString:searchResult.artworkURL60];
@@ -194,13 +180,12 @@
     //3. Calling the setImageForState method
     [button setImageForState:UIControlStateNormal withURLRequest:request placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
         
-    //4. Scalling and placing the image in the success block
+        //4. Scalling and placing the image in the success block
         UIImage *unscaledImage = [UIImage imageWithCGImage:image.CGImage scale:1.0 orientation:image.imageOrientation];
         [weakButton setImage:unscaledImage forState:UIControlStateNormal];
     }
-    failure:nil];
+                     failure:nil];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -217,5 +202,16 @@
     
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{self.scrollView.contentOffset = CGPointMake(self.scrollView.bounds.size.width * sender.currentPage, 0); } completion:nil];
 }
+
+- (void)buttonPressed:(UIButton *)sender {
+    
+    DetailViewController *controller = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+    
+    SearchResult *searchResult = self.search.searchResults[sender.tag - 2000];
+    controller.searchResult = searchResult;
+    
+    [controller presentInParentViewController:self];
+}
+
 
 @end

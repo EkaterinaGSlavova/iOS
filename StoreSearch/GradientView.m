@@ -18,7 +18,9 @@
     }
     return self;
 }
-
+- (void)dealloc {
+    NSLog(@"dealloc %@", self);
+}
 - (void)drawRect:(CGRect)rect {
     
     //1. create two C-style arrays that contain the “color stops” for the gradient.
@@ -45,7 +47,5 @@
     
 }
 
-- (void)dealloc {
-    NSLog(@"dealloc %@", self);
-}
+
 @end

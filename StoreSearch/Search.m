@@ -20,17 +20,17 @@ static NSOperationQueue *queue = nil;
 
 @implementation Search
 
-- (void)dealloc {
-    
-    NSLog(@"dealloc %@", self);
-}
-
 + (void)initialize {
     if (self == [Search class]) {
         queue = [[NSOperationQueue alloc]init];
     }
 }
-- (void)performSearchForText:(NSString *)text category:(NSInteger)category completion:(SearcgBlock)block {
+- (void)dealloc {
+    
+    NSLog(@"dealloc %@", self);
+}
+
+- (void)performSearchForText:(NSString *)text category:(NSInteger)category completion:(SearchBlock)block {
     
     if ([text length] > 0) {
         [queue cancelAllOperations];

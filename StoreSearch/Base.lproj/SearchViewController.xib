@@ -20,9 +20,6 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" keyboardDismissMode="interactive" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BwX-mp-zkw">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <variation key="widthClass=compact" misplaced="YES">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    </variation>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="Gdr-5d-NAk"/>
                         <outlet property="delegate" destination="-1" id="9e7-Gb-iGy"/>
@@ -42,6 +39,9 @@
                                     <segment title="Software"/>
                                     <segment title="E-Books"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="-1" eventType="valueChanged" id="fg3-9I-OSp"/>
+                                </connections>
                             </segmentedControl>
                         </navigationItem>
                     </items>

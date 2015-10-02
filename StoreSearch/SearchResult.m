@@ -12,7 +12,7 @@
 
 - (NSComparisonResult)compareName:(SearchResult *)other {
     
-    return [self.artistName localizedStandardCompare:other.artistName];
+    return [self.name localizedStandardCompare:other.name];
 }
 
 - (NSString *)kindForDisplay {

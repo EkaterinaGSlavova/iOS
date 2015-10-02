@@ -5,13 +5,20 @@
 //  Created by Ekaterina on 9/15/15.
 //  Copyright (c) 2015 Ekaterina. All rights reserved.
 //
-
+#import <AFNetworking/UIImageView+AFNetworking.h>
 #import "SearchResultCell.h"
 #import "SearchResult.h"
-#import <AFNetworking/UIImageView+AFNetworking.h>
 
 @implementation SearchResultCell
 
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        // Initialization code
+    }
+    return self;
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
@@ -33,15 +40,13 @@
     
     NSString *artistName = searchResult.artistName;
     if (artistName == nil) {
-        artistName = @"Unknown";
+        artistName = NSLocalizedString(@"Unknown", @"Unknown artist name");
     }
     
     NSString *kind = [searchResult kindForDisplay];
     self.artistNameLabel.text = [NSString stringWithFormat:NSLocalizedString(@"%@ (%@)", @"Format for artist name label"), artistName, kind];
     
     [self.artworkImageView setImageWithURL:[NSURL URLWithString:searchResult.artworkURL60] placeholderImage:[UIImage imageNamed:@"Placeholder"]];
-
-  
 }
 
 - (void)prepareForReuse {

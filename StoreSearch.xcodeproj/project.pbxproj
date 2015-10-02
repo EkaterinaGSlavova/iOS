@@ -24,8 +24,12 @@
 		C4A03F891BBAC0460019C3EB /* LandscapeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4A03F8B1BBAC0460019C3EB /* LandscapeViewController.xib */; };
 		C4A03F8E1BBAC84B0019C3EB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4A03F8C1BBAC84B0019C3EB /* Localizable.strings */; };
 		C4A3096A1BB9340B009A2C81 /* LandscapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A309681BB9340B009A2C81 /* LandscapeViewController.m */; };
+		C4CF0E961BBDC4CD00ECA2DD /* DetailViewController ~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4CF0E941BBDC4CD00ECA2DD /* DetailViewController ~ipad.xib */; };
+		C4DA08231BBD76FF009FF382 /* UISplitViewControllerDelegateService.m in Sources */ = {isa = PBXBuildFile; fileRef = C4DA08221BBD76FF009FF382 /* UISplitViewControllerDelegateService.m */; };
 		C4E58BE71BABFE7A00971E13 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E58BE51BABFE7A00971E13 /* DetailViewController.m */; };
 		C4E58BEB1BAC526700971E13 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E58BEA1BAC526700971E13 /* GradientView.m */; };
+		C4EF43F71BBC0E9F0018839B /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EF43F61BBC0E9F0018839B /* MenuViewController.m */; };
+		C4EF43F91BBC1B430018839B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EF43F81BBC1B430018839B /* MessageUI.framework */; };
 		FC046FF5D70C5AADFB473D0E /* libPods-StoreSearch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A149529DADD08F85D5C85FFD /* libPods-StoreSearch.a */; };
 /* End PBXBuildFile section */
 
@@ -73,12 +77,19 @@
 		C4A03F8A1BBAC0460019C3EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LandscapeViewController.xib; sourceTree = "<group>"; };
 		C4A03F8D1BBAC84B0019C3EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C4A03F8F1BBAC8970019C3EB /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C4A0D6631BBE92F000EBB90D /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = "nl.lproj/DetailViewController ~ipad.strings"; sourceTree = "<group>"; };
 		C4A309671BB9340B009A2C81 /* LandscapeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandscapeViewController.h; sourceTree = "<group>"; };
 		C4A309681BB9340B009A2C81 /* LandscapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandscapeViewController.m; sourceTree = "<group>"; };
+		C4CF0E951BBDC4CD00ECA2DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "Base.lproj/DetailViewController ~ipad.xib"; sourceTree = "<group>"; };
+		C4DA08211BBD76FF009FF382 /* UISplitViewControllerDelegateService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISplitViewControllerDelegateService.h; sourceTree = "<group>"; };
+		C4DA08221BBD76FF009FF382 /* UISplitViewControllerDelegateService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISplitViewControllerDelegateService.m; sourceTree = "<group>"; };
 		C4E58BE41BABFE7A00971E13 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		C4E58BE51BABFE7A00971E13 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		C4E58BE91BAC526700971E13 /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
 		C4E58BEA1BAC526700971E13 /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
+		C4EF43F51BBC0E9F0018839B /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		C4EF43F61BBC0E9F0018839B /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		C4EF43F81BBC1B430018839B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4EF43F91BBC1B430018839B /* MessageUI.framework in Frameworks */,
 				FC046FF5D70C5AADFB473D0E /* libPods-StoreSearch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +124,7 @@
 		9259F3ADD026361EBD760D0D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C4EF43F81BBC1B430018839B /* MessageUI.framework */,
 				A149529DADD08F85D5C85FFD /* libPods-StoreSearch.a */,
 			);
 			name = Frameworks;
@@ -158,6 +171,7 @@
 				C4E58BE41BABFE7A00971E13 /* DetailViewController.h */,
 				C4E58BE51BABFE7A00971E13 /* DetailViewController.m */,
 				C4A03F861BBABE490019C3EB /* DetailViewController.xib */,
+				C4CF0E941BBDC4CD00ECA2DD /* DetailViewController ~ipad.xib */,
 				C4E58BE91BAC526700971E13 /* GradientView.h */,
 				C4E58BEA1BAC526700971E13 /* GradientView.m */,
 				C4A309671BB9340B009A2C81 /* LandscapeViewController.h */,
@@ -165,6 +179,10 @@
 				C4A03F8B1BBAC0460019C3EB /* LandscapeViewController.xib */,
 				C4A03F731BBA79ED0019C3EB /* Search.h */,
 				C4A03F741BBA79ED0019C3EB /* Search.m */,
+				C4EF43F51BBC0E9F0018839B /* MenuViewController.h */,
+				C4EF43F61BBC0E9F0018839B /* MenuViewController.m */,
+				C4DA08211BBD76FF009FF382 /* UISplitViewControllerDelegateService.h */,
+				C4DA08221BBD76FF009FF382 /* UISplitViewControllerDelegateService.m */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -286,6 +304,7 @@
 				C4A03F8E1BBAC84B0019C3EB /* Localizable.strings in Resources */,
 				C41D00FF1BA85CAE00D9F6A9 /* SearchResultCell.xib in Resources */,
 				C4A03F761BBAB3010019C3EB /* NothingFoundCell.xib in Resources */,
+				C4CF0E961BBDC4CD00ECA2DD /* DetailViewController ~ipad.xib in Resources */,
 				C4A03F891BBAC0460019C3EB /* LandscapeViewController.xib in Resources */,
 				C4A03F7F1BBABC660019C3EB /* SearchViewController.xib in Resources */,
 			);
@@ -343,10 +362,12 @@
 				C41D00F71BA8357700D9F6A9 /* SearchViewController.m in Sources */,
 				C41D00FB1BA84DF300D9F6A9 /* SearchResult.m in Sources */,
 				C41D01021BA8661300D9F6A9 /* SearchResultCell.m in Sources */,
+				C4DA08231BBD76FF009FF382 /* UISplitViewControllerDelegateService.m in Sources */,
 				C41D00D11BA832A300D9F6A9 /* main.m in Sources */,
 				C4E58BEB1BAC526700971E13 /* GradientView.m in Sources */,
 				C4A3096A1BB9340B009A2C81 /* LandscapeViewController.m in Sources */,
 				C4E58BE71BABFE7A00971E13 /* DetailViewController.m in Sources */,
+				C4EF43F71BBC0E9F0018839B /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +449,15 @@
 				C4A03F8F1BBAC8970019C3EB /* nl */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		C4CF0E941BBDC4CD00ECA2DD /* DetailViewController ~ipad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4CF0E951BBDC4CD00ECA2DD /* Base */,
+				C4A0D6631BBE92F000EBB90D /* nl */,
+			);
+			name = "DetailViewController ~ipad.xib";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -519,6 +549,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StoreSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
@@ -537,6 +568,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StoreSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
