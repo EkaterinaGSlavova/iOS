@@ -16,6 +16,7 @@
 		C41D00FB1BA84DF300D9F6A9 /* SearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = C41D00FA1BA84DF300D9F6A9 /* SearchResult.m */; };
 		C41D00FF1BA85CAE00D9F6A9 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41D00FE1BA85CAE00D9F6A9 /* SearchResultCell.xib */; };
 		C41D01021BA8661300D9F6A9 /* SearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C41D01011BA8661300D9F6A9 /* SearchResultCell.m */; };
+		C43D7F0B1BC1107B0051B258 /* Detail.xib in Resources */ = {isa = PBXBuildFile; fileRef = C43D7F0A1BC1107B0051B258 /* Detail.xib */; };
 		C4A03F751BBA79ED0019C3EB /* Search.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A03F741BBA79ED0019C3EB /* Search.m */; };
 		C4A03F761BBAB3010019C3EB /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4A03F781BBAB3010019C3EB /* NothingFoundCell.xib */; };
 		C4A03F7A1BBAB8610019C3EB /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4A03F7C1BBAB8610019C3EB /* LoadingCell.xib */; };
@@ -25,7 +26,6 @@
 		C4A03F8E1BBAC84B0019C3EB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4A03F8C1BBAC84B0019C3EB /* Localizable.strings */; };
 		C4A3096A1BB9340B009A2C81 /* LandscapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A309681BB9340B009A2C81 /* LandscapeViewController.m */; };
 		C4CF0E961BBDC4CD00ECA2DD /* DetailViewController ~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4CF0E941BBDC4CD00ECA2DD /* DetailViewController ~ipad.xib */; };
-		C4DA08231BBD76FF009FF382 /* UISplitViewControllerDelegateService.m in Sources */ = {isa = PBXBuildFile; fileRef = C4DA08221BBD76FF009FF382 /* UISplitViewControllerDelegateService.m */; };
 		C4E58BE71BABFE7A00971E13 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E58BE51BABFE7A00971E13 /* DetailViewController.m */; };
 		C4E58BEB1BAC526700971E13 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E58BEA1BAC526700971E13 /* GradientView.m */; };
 		C4EF43F71BBC0E9F0018839B /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EF43F61BBC0E9F0018839B /* MenuViewController.m */; };
@@ -64,6 +64,7 @@
 		C41D00FE1BA85CAE00D9F6A9 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		C41D01001BA8661300D9F6A9 /* SearchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultCell.h; sourceTree = "<group>"; };
 		C41D01011BA8661300D9F6A9 /* SearchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultCell.m; sourceTree = "<group>"; };
+		C43D7F0A1BC1107B0051B258 /* Detail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Detail.xib; sourceTree = "<group>"; };
 		C4A03F731BBA79ED0019C3EB /* Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search.h; sourceTree = "<group>"; };
 		C4A03F741BBA79ED0019C3EB /* Search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Search.m; sourceTree = "<group>"; };
 		C4A03F771BBAB3010019C3EB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NothingFoundCell.xib; sourceTree = "<group>"; };
@@ -81,8 +82,6 @@
 		C4A309671BB9340B009A2C81 /* LandscapeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandscapeViewController.h; sourceTree = "<group>"; };
 		C4A309681BB9340B009A2C81 /* LandscapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandscapeViewController.m; sourceTree = "<group>"; };
 		C4CF0E951BBDC4CD00ECA2DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "Base.lproj/DetailViewController ~ipad.xib"; sourceTree = "<group>"; };
-		C4DA08211BBD76FF009FF382 /* UISplitViewControllerDelegateService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISplitViewControllerDelegateService.h; sourceTree = "<group>"; };
-		C4DA08221BBD76FF009FF382 /* UISplitViewControllerDelegateService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISplitViewControllerDelegateService.m; sourceTree = "<group>"; };
 		C4E58BE41BABFE7A00971E13 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		C4E58BE51BABFE7A00971E13 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		C4E58BE91BAC526700971E13 /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
@@ -172,6 +171,7 @@
 				C4E58BE51BABFE7A00971E13 /* DetailViewController.m */,
 				C4A03F861BBABE490019C3EB /* DetailViewController.xib */,
 				C4CF0E941BBDC4CD00ECA2DD /* DetailViewController ~ipad.xib */,
+				C43D7F0A1BC1107B0051B258 /* Detail.xib */,
 				C4E58BE91BAC526700971E13 /* GradientView.h */,
 				C4E58BEA1BAC526700971E13 /* GradientView.m */,
 				C4A309671BB9340B009A2C81 /* LandscapeViewController.h */,
@@ -181,8 +181,6 @@
 				C4A03F741BBA79ED0019C3EB /* Search.m */,
 				C4EF43F51BBC0E9F0018839B /* MenuViewController.h */,
 				C4EF43F61BBC0E9F0018839B /* MenuViewController.m */,
-				C4DA08211BBD76FF009FF382 /* UISplitViewControllerDelegateService.h */,
-				C4DA08221BBD76FF009FF382 /* UISplitViewControllerDelegateService.m */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -304,6 +302,7 @@
 				C4A03F8E1BBAC84B0019C3EB /* Localizable.strings in Resources */,
 				C41D00FF1BA85CAE00D9F6A9 /* SearchResultCell.xib in Resources */,
 				C4A03F761BBAB3010019C3EB /* NothingFoundCell.xib in Resources */,
+				C43D7F0B1BC1107B0051B258 /* Detail.xib in Resources */,
 				C4CF0E961BBDC4CD00ECA2DD /* DetailViewController ~ipad.xib in Resources */,
 				C4A03F891BBAC0460019C3EB /* LandscapeViewController.xib in Resources */,
 				C4A03F7F1BBABC660019C3EB /* SearchViewController.xib in Resources */,
@@ -362,7 +361,6 @@
 				C41D00F71BA8357700D9F6A9 /* SearchViewController.m in Sources */,
 				C41D00FB1BA84DF300D9F6A9 /* SearchResult.m in Sources */,
 				C41D01021BA8661300D9F6A9 /* SearchResultCell.m in Sources */,
-				C4DA08231BBD76FF009FF382 /* UISplitViewControllerDelegateService.m in Sources */,
 				C41D00D11BA832A300D9F6A9 /* main.m in Sources */,
 				C4E58BEB1BAC526700971E13 /* GradientView.m in Sources */,
 				C4A3096A1BB9340B009A2C81 /* LandscapeViewController.m in Sources */,

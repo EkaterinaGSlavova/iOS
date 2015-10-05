@@ -18,6 +18,7 @@ typedef NS_ENUM(NSUInteger, DetailViewControllerAnimationType) {
 @interface DetailViewController : UIViewController <UISplitViewControllerDelegate>
 
 @property (nonatomic, strong) SearchResult *searchResult;
+@property (nonatomic, weak) IBOutlet UIView *popupView;
 
 - (void)presentInParentViewController:(UIViewController *)parentViewController;
 - (void)dismissFromParentViewControllerWithAnimationType:(DetailViewControllerAnimationType)animationType;

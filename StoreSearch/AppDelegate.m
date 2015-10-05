@@ -35,7 +35,7 @@
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         self.splitViewController = [[UISplitViewController alloc] init];
         
-        DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+        DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController ~ipad" bundle:nil];
         UINavigationController *detailNavigationController = [[UINavigationController alloc] initWithRootViewController:detailViewController];
         
         self.splitViewController.delegate = detailViewController;

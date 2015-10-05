@@ -17,7 +17,6 @@
 
 @interface DetailViewController () <UIGestureRecognizerDelegate, MFMessageComposeViewControllerDelegate>
 
-@property (nonatomic, weak) IBOutlet UIView *popupView;
 @property (nonatomic, weak) IBOutlet UIImageView *artworkImageView;
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
 @property (nonatomic, weak) IBOutlet UILabel *artistNameLabel;
@@ -65,7 +64,7 @@
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"LandscapeBackground"]];
-        self.popupView.hidden = (self.searchResult == nil);
+        self.popupView.hidden = !self.searchResult;
         self.title = [[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleDisplayName"];
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(menuButtonPressed:)];
     } else {
@@ -74,13 +73,13 @@
         gestureRecognizer.cancelsTouchesInView = NO;
         gestureRecognizer.delegate = self;
         [self.view addGestureRecognizer:gestureRecognizer];
-        self.view.backgroundColor = [UIColor clearColor];
+        
     }
-    [self.splitViewController.view setNeedsLayout];
+    //[self.splitViewController.view setNeedsLayout];
 
-    if (self.searchResult != nil) {
+    if (self.searchResult) {
         [self updateUI];
-        [self.splitViewController.view setNeedsLayout];
+        //[self.splitViewController.view setNeedsLayout];
     }
 }
 

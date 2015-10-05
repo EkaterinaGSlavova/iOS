@@ -13,6 +13,7 @@
 #import "LandscapeViewController.h"
 #import "Search.h"
 
+
 static NSString *const SearchResultCellIdentifier = @"SearchResultCell";
 static NSString *const NothingFoundCellIdentifier = @"NothingFoundCell";
 static NSString *const LoadingCellIdentifier = @"LoadingCell";
@@ -31,13 +32,16 @@ static NSString *const LoadingCellIdentifier = @"LoadingCell";
     Search *_search;
     LandscapeViewController *_landscapeViewController;
     UIStatusBarStyle _statusBarStyle;
+    //BOOL _firstDisplayOfDetail;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
         self.tableView.contentInset = UIEdgeInsetsMake(108, 0, 0, 0);
-    self.tableView.rowHeight = 80;
+    self.tableView.rowHeight = 80.0f;
+    _statusBarStyle = UIStatusBarStyleDefault;
+    //_firstDisplayOfDetail = YES;
     
     UINib *cellNib = [UINib nibWithNibName:SearchResultCellIdentifier bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:SearchResultCellIdentifier];
@@ -55,7 +59,6 @@ static NSString *const LoadingCellIdentifier = @"LoadingCell";
         [self.searchBar becomeFirstResponder];
     }
 
-    _statusBarStyle = UIStatusBarStyleDefault;
 }
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return _statusBarStyle;
@@ -174,7 +177,23 @@ static NSString *const LoadingCellIdentifier = @"LoadingCell";
         
         self.detailViewController = controller;
     } else {
-        self.detailViewController.searchResult = searchResult;
+      self.detailViewController.searchResult = searchResult;
+        /*DetailViewController *controller = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+        controller.searchResult = searchResult;
+        
+        if (_firstDisplayOfDetail) {
+            _firstDisplayOfDetail = NO;
+          
+            CGPoint destinationCenter = self.detailViewController.popupView.center;
+            
+            self.detailViewController.popupView.center = CGPointMake(CGRectGetMidX(self.detailViewController.view.frame), CGRectGetMaxY(self.detailViewController.view.frame) + CGRectGetHeight(self.detailViewController.popupView.bounds));
+            
+            [UIView animateWithDuration:0.3 animations:^{
+                self.detailViewController.popupView.center = destinationCenter;
+            }];
+        }
+        self.detailViewController.searchResult = searchResult; */
+    
     }
 }
 
