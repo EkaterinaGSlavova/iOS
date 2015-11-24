@@ -106,7 +106,7 @@
                     <include reference="pdU-pD-Nzr"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="549" y="495"/>
+            <point key="canvasLocation" x="-340" y="-21"/>
         </view>
     </objects>
 </document>
